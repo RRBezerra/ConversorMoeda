@@ -28,7 +28,5 @@ steps:
   inputs:
     target: 'apk'
     projectDirectory: '.'
-    buildFlavour: 'Produção'
-    buildNumber: '1'
-    buildName: '1'
-    entryPoint: 'lib/main.dart'
+    entryPoint: "lib/main.dart"
+    iosCodesign: false
