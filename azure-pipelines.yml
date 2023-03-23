@@ -28,7 +28,7 @@ steps:
   inputs:
     target: 'apk'
     projectDirectory: '.'
-    flutterDirectory: '"lib/main.dart"'
     buildFlavour: 'Produção'
     buildNumber: '1'
     buildName: '1'
+    entryPoint: 'lib/main.dart'
