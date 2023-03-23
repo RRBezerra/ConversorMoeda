@@ -5,19 +5,6 @@
 
 trigger:
 - main
-- task: FlutterInstall@0
-  inputs:
-    mode: 'auto'
-    channel: 'stable'
-    version: 'latest'
-- task: FlutterBuild@0
-  inputs:
-    target: 'apk'
-    projectDirectory: 'main'
-    flutterDirectory: 'main'
-    buildFlavour: 'Produção'
-    buildNumber: '1'
-    buildName: '1'
 
 pool:
   vmImage: ubuntu-latest
@@ -30,3 +17,10 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: FlutterBuild@0
+  inputs:
+    target: 'apk'
+    projectDirectory: 'main'
+    buildFlavour: 'Produção'
+    buildNumber: '1'
+    buildName: '1'
