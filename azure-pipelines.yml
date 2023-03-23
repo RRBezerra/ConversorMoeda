@@ -30,3 +30,13 @@ steps:
     projectDirectory: '.'
     entryPoint: "lib/main.dart"
     iosCodesign: false
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(build.artifactStagingDirectory)'
+  inputs:
+    Contents: '**/*.apk'
+    TargetFolder: '$(build.artifactStagingDirectory)'
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish artifact'
+  inputs:
+    PathtoPublish: "APKs"
+    ArtifactName: 'APP_APK'
